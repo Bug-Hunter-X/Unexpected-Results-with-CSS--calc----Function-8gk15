@@ -1,0 +1,2 @@
+# CSS calc() Function Errors
+This repository demonstrates some uncommon errors that can occur when using the CSS `calc()` function.  The `bug.css` file shows examples of code that produces unexpected results. The `bugSolution.css` file shows the corrected versions.  The issues are related to inconsistent units, incorrect operator precedence, and potential problems with nesting `calc()` functions.  Remember to always specify units correctly and be mindful of operator order for reliable results with `calc()`. 
