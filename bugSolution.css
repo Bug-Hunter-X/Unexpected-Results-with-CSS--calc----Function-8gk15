@@ -1,0 +1,25 @@
+/* bugSolution.css */
+/* Correcting the calc() issues */
+
+.container {
+  width: calc(100% - 10px); /* Correct: uses consistent units */
+}
+
+.element {
+  margin: calc((100px + 20%) / 2); /* Might still be ambiguous - consider simplification */
+  /* A clearer, more reliable version if exact behavior is needed */
+  margin: calc(50px + 10%);
+}
+
+.nested {
+  /* Avoid deeply nested calc() if possible */
+  width: calc(50% - calc(10px + 5%)); /*Potentially problematic, consider simplification*/
+  /* Better - less nested */
+  width: calc(50% - 15px); /*Assuming 5% of 100px is ~5px*/ 
+}
+
+/* Further considerations for calc():
+- Older browsers might have limited support for complex `calc()` expressions. 
+- Avoid unnecessary complexity to improve browser compatibility and maintainability.  
+- Simplify your calculations if possible for better readability and reduced chance of errors.
+*/
